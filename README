@@ -2,4 +2,4 @@ django-registration checks user name duplicacy in a case insensitive way. That m
 
 Once installed, add following line in settings.py:
 
-AUTHENTICATION_BACKENDS = ('myproject.myapp.backends.CaseInsensitiveModelBackend',)
+AUTHENTICATION_BACKENDS = ('insensitive.backends.CaseInsensitiveModelBackend',)
