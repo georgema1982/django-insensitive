@@ -1,0 +1,5 @@
+django-registration checks user name duplicacy in a case insensitive way. That means if there's already a user name "Test" in the database, you can't register as "test", "tEst" or whatsoever. This is a common behavior found in most websites. However, django-registration doesn't provide a case insensitive login backend. Django's default login backend is case sensitive towards user name. It's inconsistent for those who use django-registration. django-insensitive provides such a case insensitive login backend and can work as a companion with django-registration or independently. The code wasn't created by me. All the credits go to Anthony Lewis who posted the solution at http://blog.shopfiber.com/?p=220. I just think it's worth a independent library since it's a very common required feature.
+
+Once installed, add following line in settings.py:
+
+AUTHENTICATION_BACKENDS = ('myproject.myapp.backends.CaseInsensitiveModelBackend',)
